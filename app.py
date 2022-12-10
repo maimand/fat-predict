@@ -66,14 +66,14 @@ def advanced_check():
         return jsonify({"message": "ERROR: Unauthorized"}), 401
 
     args = request.args
-    age = args.get('age')
-    weight = args.get('weight')
-    height = args.get('height')
-    neck = args.get('neck')
-    chest = args.get('chest')
-    waist = args.get('waist')
-    hip = args.get('hip')
-    thingh = args.get('thingh')
+    age = float(args.get('age'))
+    weight = float(args.get('weight'))
+    height = float(args.get('height'))
+    neck = float(args.get('neck'))
+    chest = float(args.get('chest'))
+    waist = float(args.get('waist'))
+    hip = float(args.get('hip'))
+    thingh = float(args.get('thingh'))
     sex = args.get('sex')
 
     return jsonify(success=True, res=advanced_body_fat(age, weight, height, neck, chest, waist, hip, thingh, sex))
