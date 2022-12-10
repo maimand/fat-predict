@@ -1,14 +1,6 @@
-import pickle
 import math
-import numpy as np  # linear algebra
-import pandas as pd  # data processing, CSV file I/O (e.g. pd.read_csv)
-import os
 import tensorflow as tf
-from flask import Flask, render_template, request, jsonify
-from werkzeug.utils import secure_filename
-import os
-import base64
-from io import BytesIO
+from flask import Flask, request, jsonify
 
 loaded_model = tf.keras.models.load_model('model.h5')
 
