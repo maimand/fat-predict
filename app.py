@@ -11,7 +11,7 @@ def advanced_body_fat(age, weight, height, neck, chest, waist, hip, thingh, sex)
         return 0.0
     data = [age, weight / 0.453592, height / 2.54, neck, chest, waist, hip, thingh]
     pred = loaded_model.predict([data])
-    return float(pred[0][0] + 0.1)
+    return float(pred[0][0] + 10)
 
 
 def navy_body_fat(neck, waist, height, sex):
